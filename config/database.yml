@@ -30,6 +30,6 @@ test:
 #     url: <%= ENV["MY_APP_DATABASE_URL"] %>
 production:
   <<: *default
-  database: Budgy_production
+  database: <%= ENV['POSTGRES_DB'] %>
   username: <%= ENV['POSTGRES_USER'] %>
   password: <%= ENV['POSTGRES_PASSWORD'] %>
