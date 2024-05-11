@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: Budgy_production
-  username: Budgy
-  password: <%= ENV["Budgy_DATABASE_PASSWORD"] %>
+  username: <%= ENV['POSTGRES_USER'] %>
+  password: <%= ENV['POSTGRES_PASSWORD'] %>
